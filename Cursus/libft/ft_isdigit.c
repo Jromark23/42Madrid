@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 16:46:57 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/18 21:57:19 by joroman-         ###   ########.fr       */
+/*   Created: 2024/09/18 20:39:28 by joroman-          #+#    #+#             */
+/*   Updated: 2024/09/18 21:41:22 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	isdigit(int c)
 {
-	size_t	count;
-
-	count = 0;
-	while (s[count] != '\0')
-		count++;
-	return (count);
+	return (c >= '0' && c <= '9');
 }
-

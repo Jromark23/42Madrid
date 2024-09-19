@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 16:46:57 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/18 21:57:19 by joroman-         ###   ########.fr       */
+/*   Created: 2024/09/18 22:11:14 by joroman-          #+#    #+#             */
+/*   Updated: 2024/09/18 22:21:38 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_toupper(int c)
 {
-	size_t	count;
-
-	count = 0;
-	while (s[count] != '\0')
-		count++;
-	return (count);
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }
-

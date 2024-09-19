@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joroman- <joroman-@studiante42.fr>         +#+  +:+       +#+        */
+/*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/15 15:57:42 by joroman-          #+#    #+#             */
-/*   Updated: 2024/07/15 17:41:27 by joroman-         ###   ########.fr       */
+/*   Created: 2024/09/18 22:34:17 by joroman-          #+#    #+#             */
+/*   Updated: 2024/09/18 22:40:37 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	len;
-	unsigned int	i;
+	size_t	len;
+	size_t	i;
 
 	i = 0;
 	len = 0;
@@ -23,24 +25,9 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 		return (len);
 	while (src[i] && i < size - 1)
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (len);
 }
-
-// int	main(void)
-// {
-// 	char	dest[60];
-// 	char	*src;
-// 	int		size;
-
-// 	src = "mensaje de prueba al ej";
-// 	size = 10;
-// 	printf("%d\n", ft_strlcpy(dest, src, size));
-// 	printf(".%s.\n\n", dest);
-// 	printf("%lu\n", strlcpy(dest, src, size));
-// 	printf(".%s.\n\n", dest);
-// 	return (0);
-// }
