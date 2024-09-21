@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 16:46:57 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/21 19:27:06 by joroman-         ###   ########.fr       */
+/*   Created: 2024/09/21 15:42:00 by joroman-          #+#    #+#             */
+/*   Updated: 2024/09/21 15:57:59 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	*memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	count;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	count = 0;
-	while (s[count] != '\0')
-		count++;
-	return (count);
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+
+	while (n--)
+		*d++ = *s++;
+	return (dest);
 }
-
