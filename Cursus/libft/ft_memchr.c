@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 18:03:48 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/21 18:52:36 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:03:48 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,15 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 // #include <stdio.h>
 // #include <string.h>
-
+//
 // int	main(void)
 // {
 //     char str[] = "Hola, mundo!";
 //     size_t n = strlen(str);
-
+//
 //     char *result = ft_memchr(str, 'w', n);
 // 	char *result2 = memchr(str, 'w', n);
-
+//
 //     if (result != NULL)
 //         printf("encontrado\n");
 //     else
@@ -44,8 +44,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 //         printf("encontrado\n");
 //     else
 //         printf("no encontrado.\n");
-
-
 //     return (0);
 // }
-

@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 15:42:00 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/21 15:57:59 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/23 21:01:18 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*memcpy(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-
 	while (n--)
 		*d++ = *s++;
 	return (dest);

@@ -6,12 +6,15 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 15:59:06 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/21 19:52:43 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/23 20:57:50 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// We compare if the memory area is before or after. If it's before
+// we copy normally, if not, we need to copy from the end.
+// We need to decrement the pointers first to copy correctly.
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*aux_src;
@@ -19,20 +22,17 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	aux_src = (const unsigned char *)src;
 	aux_dst = (unsigned char *)dest;
-
 	if (aux_dst < aux_src)
 	{
 		while (n--)
 			*aux_dst++ = *aux_src++;
 	}
-	else 
+	else
 	{
+		aux_src += n;
+		aux_dst += n;
 		while (n--)
-		{
-			*aux_dst = *aux_src;
-			aux_dst++;
-			aux_src++;
-		}
+			*(--aux_dst) = *(--aux_src);
 	}
 	return (dest);
 }

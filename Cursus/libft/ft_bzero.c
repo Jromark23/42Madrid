@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 16:46:57 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:01:57 by joroman-         ###   ########.fr       */
+/*   Created: 2024/09/22 13:06:30 by joroman-          #+#    #+#             */
+/*   Updated: 2024/09/22 13:23:36 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+// Changes n bytes from s to '\0'
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	count;
+	unsigned char	*src;
 
-	count = 0;
-	while (s[count] != '\0')
-		count++;
-	return (count);
+	src = (unsigned char *)s;
+	while (n--)
+		*src++ = 0;
 }
