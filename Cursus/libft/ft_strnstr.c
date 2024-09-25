@@ -6,12 +6,14 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 20:27:12 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:03:57 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:10:30 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Searches for the substring 's2' in 's1' in the first 'n' characters.
+// Returns a pointer to the start of the substring or NULL if not found.
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

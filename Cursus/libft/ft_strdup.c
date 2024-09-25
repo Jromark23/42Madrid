@@ -6,13 +6,15 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:14:12 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:36:53 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:10:49 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
+// Duplicates the string 's' by allocating new memory.
+// Returns a pointer to the duplicated string or NULL if allocation fails.
 char	*ft_strdup(const char *s)
 {
 	size_t		len;
@@ -61,9 +63,9 @@ char	*ft_strdup(const char *s)
 //         printf("Ambas funciones duplican correctamente la cadena.\n");
 //     else
 //         printf("Error: Las funciones no duplican de la misma forma.\n");
-
+//
 //     free(dup1);
 //     free(dup2);
-
+//
 //     return (0);
 // }

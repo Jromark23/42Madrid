@@ -6,12 +6,14 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 13:41:01 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 20:58:06 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:02:29 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Fills the first 'n' bytes of 's' with the value 'c'
+// Returns a pointer to the memory block 's'.
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;

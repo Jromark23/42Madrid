@@ -6,15 +6,16 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 20:05:28 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:19:18 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:05:12 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-// Asigna e inicia N elementos de SIZE bytes a 0.
-// Si esta OK, devuelve puntero al primer byte.
+// Allocates memory for an array of 'nmemb' elements
+// of size 'size' and initializes it to zero.
+// Returns a pointer to the allocated memory or NULL if it fails.
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;

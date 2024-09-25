@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:54:07 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:14:53 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 21:34:12 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
 
 void		*ft_memset(void *s, int c, size_t n);
 void		*ft_memcpy(void *dest, const void *src, size_t n);
@@ -22,6 +24,10 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t nmemb, size_t size);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putstr_fd(char *s, int fd);
+void		ft_putendl_fd(char *s, int fd);
+void		ft_putnbr_fd(int n, int fd);
 
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
@@ -42,5 +48,53 @@ char		*strdup(const char *s);
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
+
+// Aplica la función 'f' a cada carácter de la cadena 's' y crea
+// una nueva cadena con el resultado.
+// Devuelve la nueva cadena o NULL si falla la asignación.
+// Applies the function 'f' to each character of the string 's'
+// and creates a new string with the result.
+// Returns the new string or NULL if memory allocation fails.
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+// Convierte el número entero 'n' en una cadena de caracteres.
+// Devuelve una nueva cadena con la representación del número o NULL
+// si falla la asignación.
+// Converts the integer 'n' to a string of characters.
+// Returns a new string with the representation of the number or NULL
+// if memory allocation fails.
+char		*ft_itoa(int n);
+
+// Divide la cadena 's' en un arreglo de cadenas utilizando el carácter
+// 'c' como delimitador.
+// Devuelve un array de cadenas (terminado en NULL) o NULL si falla la
+// asignación.
+// Splits the string 's' into an array of strings using the character
+// 'c' as a delimiter.
+// Returns an array of strings (NULL-terminated) or NULL if memory
+// allocation fails.
+char		**ft_split(char const *s, char c);
+
+// Elimina los caracteres presentes en 'set' desde el principio
+// y el final de 's1'.
+// Devuelve una nueva cadena sin los caracteres iniciales y finales
+// de 'set' o NULL si falla la asignación.
+// Trims the characters found in 'set' from the beginning and the end of 's1'.
+// Returns a new string without the leading and trailing 'set'
+// characters or NULL if memory allocation fails.
+char		*ft_strtrim(char const *s1, char const *set);
+
+// Aplica la función 'f' a cada carácter de la cadena 's',
+// modificando la cadena directamente.
+// No devuelve nada, simplemente modifica 's' in situ.
+// Applies the function 'f' to each character of the string 's',
+// modifying the string directly.
+// Does not return anything, just modifies 's' in place.
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+
+
+
+
 
 #endif  // LIBFT_H

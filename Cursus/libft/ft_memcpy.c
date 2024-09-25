@@ -6,12 +6,16 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 15:42:00 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:01:18 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 17:40:55 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Copia 'n' bytes del bloque de memoria apuntado 
+// por 'src' al bloque apuntado por 'dest'.
+// Copies 'n' bytes from the memory block pointed by
+// 'src' to the block pointed by 'dest'.
 void	*memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;

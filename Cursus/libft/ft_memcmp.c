@@ -6,12 +6,13 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 18:54:44 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:01:15 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:07:10 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Compares the first 'n' bytes of 's1' and 's2'.
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*left;

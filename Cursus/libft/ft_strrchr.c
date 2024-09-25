@@ -6,12 +6,14 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 22:33:11 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/23 21:03:13 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:09:41 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Searches for the character 'c' in the string 's' starting from the end.
+// Returns a pointer to the last occurrence of 'c' or NULL if not found.
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

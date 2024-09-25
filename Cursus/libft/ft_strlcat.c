@@ -6,12 +6,14 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:35:54 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/18 22:50:04 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/25 18:11:25 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Concatenates 'src' to the end of 'dst', ensuring not to exceed 'size' bytes.
+// Returns the combined length of the two strings.
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;
