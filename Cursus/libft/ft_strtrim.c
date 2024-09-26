@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 17:26:49 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 20:05:27 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:55:16 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	first = 0;
 	last = ft_strlen(s1);
-
 	while (s1[first] && ft_strchr(set, s1[first]))
 		first++;
 	while (last > first && ft_strchr(set, s1[last - 1]))

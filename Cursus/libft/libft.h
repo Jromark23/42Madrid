@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:54:07 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 21:34:12 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/26 19:54:56 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
 char		*ft_strnstr(const char *s1, const char *s2, size_t n);
 char		*strdup(const char *s);
+char		*ft_itoa(int n);
+char		*ft_strtrim(char const *s1, char const *set);
+char		*ft_strjoin(char const *s1, char const *s2);
 
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
@@ -57,14 +60,6 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size);
 // Returns the new string or NULL if memory allocation fails.
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
-// Convierte el número entero 'n' en una cadena de caracteres.
-// Devuelve una nueva cadena con la representación del número o NULL
-// si falla la asignación.
-// Converts the integer 'n' to a string of characters.
-// Returns a new string with the representation of the number or NULL
-// if memory allocation fails.
-char		*ft_itoa(int n);
-
 // Divide la cadena 's' en un arreglo de cadenas utilizando el carácter
 // 'c' como delimitador.
 // Devuelve un array de cadenas (terminado en NULL) o NULL si falla la
@@ -75,15 +70,6 @@ char		*ft_itoa(int n);
 // allocation fails.
 char		**ft_split(char const *s, char c);
 
-// Elimina los caracteres presentes en 'set' desde el principio
-// y el final de 's1'.
-// Devuelve una nueva cadena sin los caracteres iniciales y finales
-// de 'set' o NULL si falla la asignación.
-// Trims the characters found in 'set' from the beginning and the end of 's1'.
-// Returns a new string without the leading and trailing 'set'
-// characters or NULL if memory allocation fails.
-char		*ft_strtrim(char const *s1, char const *set);
-
 // Aplica la función 'f' a cada carácter de la cadena 's',
 // modificando la cadena directamente.
 // No devuelve nada, simplemente modifica 's' in situ.
@@ -91,10 +77,4 @@ char		*ft_strtrim(char const *s1, char const *set);
 // modifying the string directly.
 // Does not return anything, just modifies 's' in place.
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
-
-
-
-
-
-
 #endif  // LIBFT_H
