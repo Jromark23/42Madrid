@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:19:29 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/24 19:59:10 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/28 20:18:11 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	len_s = strlen(s);
+	len_s = ft_strlen(s);
 	if (start >= len_s)
 		return (NULL);
 	if (len > len_s - start)
