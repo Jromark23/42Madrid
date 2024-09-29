@@ -6,12 +6,11 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:14:12 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:10:49 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 12:20:37 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 // Duplicates the string 's' by allocating new memory.
 // Returns a pointer to the duplicated string or NULL if allocation fails.

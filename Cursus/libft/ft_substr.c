@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:19:29 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/28 20:18:11 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 22:37:03 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,25 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	len_s;
 
-	i = 0;
+	i = -1;
 	if (!s)
 		return (NULL);
 	len_s = ft_strlen(s);
 	if (start >= len_s)
-		return (NULL);
+	{
+		result = malloc(1);
+		if (!result)
+			return (NULL);
+		result[0] = '\0';
+		return (result);
+	}
 	if (len > len_s - start)
 		len = len_s - start;
 	result = malloc(len + 1);
 	if (!result)
 		return (NULL);
-	while (s[start] != '\0' && len-- > 0)
-	{
-		result[i++] = s[start++];
-	}
+	while (++i < len)
+		result[i] = s[start + i];
 	result[i] = '\0';
 	return (result);
 }

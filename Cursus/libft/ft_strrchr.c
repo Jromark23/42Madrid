@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 22:33:11 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:09:41 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 20:30:53 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,36 +16,16 @@
 // Returns a pointer to the last occurrence of 'c' or NULL if not found.
 char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	const char	*aux;
 
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	while (i >= 0)
+	aux = s;
+	while (*s)
+		s++;
+	while (s >= aux)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		if (*s == (char)c)
+			return ((char *)s);
+		s--;
 	}
 	return (NULL);
 }
-
-// #include <stdio.h>
-// #include <stddef.h>
-// #include <string.h>
-//
-// int main(void)
-// {
-//     char s1[] = "Hello world! que tal";
-//     char s2[] = "world";
-//     char s3[] = "";
-//     char s4[] = "world!";
-//
-//     // Caso 5: s2 no está en s1
-// 	printf("Caso 5: %s\n", ft_strrchr(s1, 'l')
-// ? ft_strrchr(s1, 'l') : "No encontrado");
-//     printf("Caso 5: %s\n", strrchr(s1, 'l') 
-//? strrchr(s1, 'l') : "No encontrado");
-//
-//     return 0;
-// }

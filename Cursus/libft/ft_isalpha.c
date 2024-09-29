@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 19:48:39 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/18 21:57:06 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 12:16:30 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
 }

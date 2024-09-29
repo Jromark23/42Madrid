@@ -6,13 +6,13 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 21:58:57 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/18 22:03:44 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 12:47:37 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isascii(int c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 22:20:09 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:09:02 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 22:30:55 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,28 @@
 // Returns a pointer to the first occurrence of 'c' or NULL if not found.
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = -1;
-	while (s[++i] != '\0')
+	while (*s)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
+	if ((char)c == '\0')
+		return ((char *)&s[ft_strlen(s)]);
 	return (NULL);
 }
 
-// #include <stdio.h>
-// #include <stddef.h>
 // #include <string.h>
-//
-// int main(void)
+// int	main(void)
 // {
-//     char s1[] = "Hello world! que tal";
-//     char s2[] = "world";
-//     char s3[] = "";
-//     char s4[] = "world!";
-//
-//     // Caso 5: s2 no está en s1
-// 	printf("Caso 5: %s\n", ft_strchr(s1, 'l')
-//	? ft_strchr(s1, 'l') : "No encontrado");
-//     printf("Caso 5: %s\n", strchr(s1, 'l')
-//	? strchr(s1, 'l') : "No encontrado");
-//
-//     return 0;
+// 	const char *str1 = "Hello, world!";
+// 	printf("1. %s\n", ft_strchr(str1, 'o'));
+// 	printf("1. %s\n", strchr(str1, 'o'));
+// 	printf("2 %s\n", ft_strchr(str1, 'x'));
+// 	printf("2 %s\n", strchr(str1, 'x'));
+// 	printf("3 %s\n", ft_strchr(str1, '\0'));
+// 	printf("3 %s\n", strchr(str1, '\0'));
+// 	printf("5 %s\n", ft_strchr(str1, 1024));
+// 	printf("5 %s\n", strchr(str1, 1024));
+//     return (0);
 // }

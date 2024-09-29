@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:11:46 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 21:33:13 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/29 12:17:19 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	num;
-	char			c;
 
 	if (n < 0)
 	{
