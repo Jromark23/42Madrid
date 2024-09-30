@@ -6,13 +6,12 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 20:10:51 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:08:28 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 10:32:05 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Compares the first 'n' characters of 's1' and 's2'.
 int	ft_strncmp(char *s1, char *s2, size_t n)
 {
 	size_t	i;

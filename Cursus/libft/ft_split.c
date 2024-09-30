@@ -6,13 +6,12 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:08:48 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/28 23:09:48 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:54:50 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Counts how many words can be extracted from "str"
 static int	counter(const char *str, char c)
 {
 	int	i;
@@ -34,8 +33,7 @@ static int	counter(const char *str, char c)
 	return (i);
 }
 
-// Frees all memory if something fail. Frees each word and then the main array.
-static void	freall(char **string, size_t words)
+static void	ft_freall(char **string, size_t words)
 {
 	size_t	i;
 
@@ -48,36 +46,22 @@ static void	freall(char **string, size_t words)
 	free(string);
 }
 
-// Creates a new word copying the chars from `str` between "first" and "last".
-static char	*create(const char *str, int first, int last)
+static int	ft_create(char **result, const char *s, int index, size_t pos[2])
 {
-	char	*word;
 	int		i;
+	char	*word;
 
-	i = 0;
-	word = malloc((last - first + 1));
+	word = malloc((pos[0] - index + 1));
 	if (!word)
-		return (0);
-	while (first < last)
-		word[i++] = str[first++];
-	word[i] = '\0';
-	return (word);
-}
-
-// Función que procesa una palabra extrayéndola de la cadena `s`, usando
-// `index` como inicio de la palabra y `pos[0]` como su final. La almacena en
-// `result[pos[1]]` y devuelve 1 si todo fue bien o 0 si falló.
-// This function processes a word by extracting it from the string `s`,
-// using `index` as the start and `pos[0]` as the end. It stores the word
-// in `result[pos[1]]` and returns 1 if successful or 0 if it failed.
-static int	process_word(char **result, const char *s, int index, size_t pos[2])
-{
-	result[pos[1]] = create(s, index, pos[0]);
-	if (!result[pos[1]])
 	{
-		freall(result, pos[1]);
+		ft_freall(result, pos[1]);
 		return (0);
 	}
+	i = 0;
+	while (index < (int)pos[0])
+		word[i++] = s[index++];
+	word[i] = '\0';
+	result[pos[1]] = word;
 	return (1);
 }
 
@@ -95,11 +79,11 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	while (pos[0] <= ft_strlen(s))
 	{
-		if (s[pos[0]] != c && index < 0)
+		if (s[pos[0]] != c && index == -1)
 			index = pos[0];
-		else if ((s[pos[0]] == c || pos[0] == ft_strlen(s)) && index >= 0)
+		else if ((s[pos[0]] == c || pos[0] == ft_strlen(s)) && index != -1)
 		{
-			if (process_word(result, s, index, pos) == 0)
+			if (ft_create(result, s, index, pos) == 0)
 				return (0);
 			index = -1;
 			pos[1]++;

@@ -6,13 +6,12 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 21:04:54 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 21:10:43 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:36:26 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Writes the string 's' to the file descriptor 'fd', followed by a newline.
 void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)

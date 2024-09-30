@@ -6,14 +6,13 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 21:14:12 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/29 12:20:37 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:56:48 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Duplicates the string 's' by allocating new memory.
-// Returns a pointer to the duplicated string or NULL if allocation fails.
+// Duplicates the string 's' allocating new memory.
 char	*ft_strdup(const char *s)
 {
 	size_t		len;
@@ -41,14 +40,14 @@ char	*ft_strdup(const char *s)
 //     dup1 = strdup(original);
 //     if (dup1 == NULL)
 //     {
-//         printf("Error: strdup no pudo duplicar la cadena.\n");
+//         printf("Error.\n");
 //         return 1;
 //     }
 //
 //     dup2 = ft_strdup(original);
 //     if (dup2 == NULL)
 //     {
-//         printf("Error: ft_strdup no pudo duplicar la cadena.\n");
+//         printf("Error.\n");
 //         free(dup1);  
 //         return 1;
 //     }
@@ -59,12 +58,8 @@ char	*ft_strdup(const char *s)
 //     printf("Duplicado con ft_strdup: %s\n", dup2);
 //
 //     if (strcmp(dup1, dup2) == 0)
-//         printf("Ambas funciones duplican correctamente la cadena.\n");
+//         printf("TODO OK .\n");
 //     else
-//         printf("Error: Las funciones no duplican de la misma forma.\n");
-//
-//     free(dup1);
-//     free(dup2);
-//
+//         printf("Error.\n");
 //     return (0);
 // }

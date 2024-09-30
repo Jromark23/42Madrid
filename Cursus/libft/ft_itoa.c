@@ -6,13 +6,13 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:12:02 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/26 19:52:45 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 08:50:55 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_intlen(int n)
+static size_t	ft_intlen(int n)
 {
 	unsigned int	num;
 	size_t			i;

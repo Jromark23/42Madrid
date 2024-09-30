@@ -6,23 +6,21 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 18:03:48 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 17:43:05 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:32:31 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// Busca el carácter 'c' en los primeros 'n' bytes del bloque de memoria 's'.
+
 // Searches the character 'c' in the first 'n' bytes of the memory block 's'.
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*src;
-	size_t			i;
+	const unsigned char	*src;
 
-	src = (unsigned char *)s;
-	i = 0;
+	src = (const unsigned char *)s;
 	while (n--)
-		if (src[i++] == (unsigned char)c)
-			return (&src[--i]);
+		if (*src++ == (const unsigned char)c)
+			return ((void *)--src);
 	return (NULL);
 }
 
@@ -31,7 +29,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 //
 // int	main(void)
 // {
-//     char str[] = "Hola, mundo!";
+//     char str[] = "Hola, amigo";
 //     size_t n = strlen(str);
 //
 //     char *result = ft_memchr(str, 'w', n);

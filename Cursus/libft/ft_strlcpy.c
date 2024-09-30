@@ -6,23 +6,20 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 22:34:17 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:11:05 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 10:29:07 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Copies the string 'src' to 'dst', ensuring not to exceed 'size' bytes.
-// Returns the total length that the string would have had in 'dst'.
+// Copies 'src' to 'dst' until 'size' bytes. Return src length
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;
 	size_t	i;
 
 	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
+	len = ft_strlen(src);
 	if (size < 1)
 		return (len);
 	while (src[i] && i < size - 1)

@@ -6,14 +6,13 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 22:20:09 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/29 22:30:55 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:55:13 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 // Searches for the character 'c' in the string 's'.
-// Returns a pointer to the first occurrence of 'c' or NULL if not found.
 char	*ft_strchr(const char *s, int c)
 {
 	while (*s)

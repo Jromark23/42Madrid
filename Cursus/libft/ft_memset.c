@@ -6,14 +6,13 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/21 13:41:01 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:02:29 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 09:36:04 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Fills the first 'n' bytes of 's' with the value 'c'
-// Returns a pointer to the memory block 's'.
+// Fills N bytes of S with the C value and returns a pointer to 's'.
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
@@ -24,11 +23,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-// It is necessary to use unsigned char to avoid 
-// problems with signed values or when filling 
-// memory in order to be able to enter in memory
-// byte by byte. With C only need the value.
-//
 // #include <stdio.h>
 // #include <string.h>
 //

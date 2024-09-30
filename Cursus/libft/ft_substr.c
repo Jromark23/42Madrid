@@ -6,13 +6,12 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 18:19:29 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/29 22:37:03 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 10:54:24 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Revisar que hacer cuando sale de la cadena, NULL o Cadena vacia?? 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*result;
@@ -45,17 +44,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // int main()
 // {
 //     char *str = "Hello, World!";
-//     char *substr = ft_substr(str, 7, 5); //"World"
+//     char *substr = ft_substr(str, 7, 5); 
 //     printf("Substring: %s\n", substr);
-//     free(substr);
-
-//     substr = ft_substr(str, 0, 5); // "Hello"
+//     substr = ft_substr(str, 0, 5);
 //     printf("Substring: %s\n", substr);
-//     free(substr);
-
-//     substr = ft_substr(str, 14, 5); // vacía
+//     substr = ft_substr(str, 14, 5); 
 //     printf("Substring: %s\n", substr);
-//     free(substr);
-
 //     return (0);
 // }
