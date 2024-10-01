@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 20:05:28 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/30 20:20:56 by joroman-         ###   ########.fr       */
+/*   Created: 2024/09/30 16:13:52 by joroman-          #+#    #+#             */
+/*   Updated: 2024/09/30 18:56:36 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+int	ft_lstsize(t_list *lst)
 {
-	void	*aux;
+	int	i;
 
-	aux = (void *)malloc(nmemb * size);
-	if (!aux)
-		return (NULL);
-	ft_bzero(aux, nmemb * size);
-	return (aux);
+	if (!lst)
+		return (0);
+	i = 1;
+	while (lst->next)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }

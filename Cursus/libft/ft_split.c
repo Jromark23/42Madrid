@@ -6,7 +6,7 @@
 /*   By: joroman- <joroman-@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:08:48 by joroman-          #+#    #+#             */
-/*   Updated: 2024/09/30 09:54:50 by joroman-         ###   ########.fr       */
+/*   Updated: 2024/09/30 20:25:56 by joroman-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,6 @@ char	**ft_split(char const *s, char c)
 // 		printf("Palabra %d: %s\n", i, result[i]);
 // 		i++;
 // 	}
-// 	freall(result, i);
+// 	ft_freall(result, i);
 // 	return (0);
 // }
