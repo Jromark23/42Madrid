@@ -1,6 +1,6 @@
 NAME = libft.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
@@ -22,8 +22,8 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(BONUS_OBJ)
-	ar rcs $(NAME) $(BONUS_OBJ)
+bonus:
+	make SRC="$(SRC) $(BONUS_SRC)"
 
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@     
